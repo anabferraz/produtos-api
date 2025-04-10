@@ -1,5 +1,5 @@
-create table produto(
-    id varchar(16) not null primary key,
+create table tb_produto(
+    codigo varchar(16) not null primary key,
     name varchar(50) not null,
     descricao varchar(300),
     preco numeric(18,2),

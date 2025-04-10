@@ -1,12 +1,28 @@
 package io.github.apiprodutos.produtos.api.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+import java.util.UUID;
+
+@Entity
+@Table(name = "tb_produto")
 public class Produto {
 
-    private String id;
+    @Column(name = "codigo")
+    @Id
+    private String id = UUID.randomUUID().toString();
+    @Column
     private String name;
+    @Column
     private String descricao;
+    @Column
     private Double preco;
+    @Column
     private Double peso;
+    @Column
     private Double altura;
 
     @Override
