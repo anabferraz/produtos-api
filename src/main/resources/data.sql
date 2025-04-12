@@ -4,5 +4,6 @@ create table tb_produto(
     descricao varchar(300),
     preco numeric(18,2),
     peso numeric(8,2),
-    altura numeric(6,2)
+    altura numeric(6,2),
+    tamanho varchar(20)
 );

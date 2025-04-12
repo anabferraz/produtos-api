@@ -24,6 +24,7 @@ public class Produto {
     private Double peso;
     @Column
     private Double altura;
+    private String tamanho;
 
     @Override
     public String toString() {
@@ -83,5 +84,12 @@ public class Produto {
 
     public void setAltura(Double altura) {
         this.altura = altura;
+    }
+    public String getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(String tamanho) {
+        this.tamanho = tamanho;
     }
 }

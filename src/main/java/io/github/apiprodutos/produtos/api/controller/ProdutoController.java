@@ -1,14 +1,13 @@
 package io.github.apiprodutos.produtos.api.controller;
 
+import io.github.apiprodutos.produtos.api.enums.Tamanho;
 import io.github.apiprodutos.produtos.api.model.Produto;
 import io.github.apiprodutos.produtos.api.repository.ProdutoRepository;
 import jakarta.annotation.Nullable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.http.HttpResponse;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("produtos")
@@ -22,6 +21,9 @@ public class ProdutoController {
     @PostMapping
     public Produto save(@RequestBody Produto produto){
         System.out.println("Produto recebido: "+ produto.toString());
+        if(produto.getAltura()<=0.5){produto.setTamanho(Tamanho.PEQUENO.toString());}
+        else if(produto.getAltura()>0.5 && produto.getAltura()<=1){produto.setTamanho(Tamanho.MEDIO.toString());}
+        else if(produto.getAltura()>1){produto.setTamanho(Tamanho.GRANDE.toString());}
         produtoRepository.save(produto);
         return produto;
     }
