@@ -1,9 +1,10 @@
-create table tb_produto(
+create table tb_chaves_pix(
     codigo varchar(16) not null primary key,
-    name varchar(50) not null,
-    descricao varchar(300),
-    preco numeric(18,2),
-    peso numeric(8,2),
-    altura numeric(6,2),
-    tamanho varchar(20)
+    keyType varchar(9) not null,
+    keyValue varchar(77) not null,
+    accType varchar(10) not null,
+    agency numeric(4) not null,
+    account numeric(8) not null,
+    holderName varchar(30) not null,
+    holderSurname varchar(45)
 );

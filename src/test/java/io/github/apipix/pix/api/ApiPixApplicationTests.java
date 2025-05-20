@@ -1,10 +1,10 @@
-package io.github.apiprodutos.produtos.api;
+package io.github.apipix.pix.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiProdutosApplicationTests {
+class ApiPixApplicationTests {
 
 	@Test
 	void contextLoads() {
