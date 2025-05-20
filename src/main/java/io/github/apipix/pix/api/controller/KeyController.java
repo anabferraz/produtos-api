@@ -51,6 +51,6 @@ public class KeyController {
     @GetMapping
     public List<Key> getAll(@RequestParam("chave_pix") String key,
                             @Nullable @RequestParam("preco") Double preco){
-        return keysRepository.findByKeyValue(key);
+        return keysRepository.findByValue(key);
     }
 }
